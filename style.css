@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Playfair+Display:ital,wght@0,400;0,500;0,900;1,400;1,900&display=swap');
+/* font-family: 'Bacasime Antique', serif;
+font-family: 'Playfair Display', serif; */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 64.5%;
+}
+.main{
+    width: 100%;
+    
+}
+.header{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+  box-shadow: 1px 1px 2px red;
+}
+.header img{
+    margin-left: 40px;
+}
+.header ul{
+    float: right;
+    margin-right: 40px;
+}
+.header ul li{
+    line-height: 80px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.header ul li a{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+    color: black;
+}
+a.action , .header ul li a:hover{
+    background-color: aqua;
+}
+.hero{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+align-items: center;
+justify-content: space-around;
+padding: 0 5%;
+/* border: 2px solid red; */
+min-height: 200px;
+}
+.fa-solid{
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 30px;
+    display: none;
+}
+#check{
+    display: none;
+}
+.hero-img img{
+    padding: 10%;
+    height: 30rem;
+}
+.hero-content{
+    /* border: 2px solid red; */
+    width: 50vw;
+}
+.hero-content h4{
+    display: inline-block;
+    box-shadow: 0 0 1rem green;
+  margin:1rem 0;
+  font-size: 1.3rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgb(31, 139, 31);
+  transition: 0.2s ease;
+}
+.hero-content h4:hover{
+    
+    box-shadow: 0 0 0 green;
+}
+.hero-content h1{
+    font-size: 5rem;
+    width: 40rem;
+    color: red;
+}
+.hero-content p{
+    font-size: 1.4rem;
+    letter-spacing: 0.04rem;
+    width: 60rem;
+    margin: 1rem 0;
+    width: 100%;
+   word-break: break-all;
+   color: black;
+}
+.hero-content .btn{
+    display: inline-block;
+margin:1rem 0;
+transition: 0.2s ease;
+/* border: 2px solid red; */
+font-size: 20px;
+padding: 7px;
+border-radius: 10px;
+background-color: rgb(206, 63, 28);
+color: white;
+}
+.hero-content .btn:hover{
+    color: white;
+    background-color: rgb(31, 139, 31 );
+    box-shadow: 1px 1px 10px green;
+}
+
+.about{
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 3% 5%;
+    justify-content: space-between;
+   align-items: center;
+}
+.about-box{
+    display: flex;
+   gap: 3rem;
+   align-items: center;
+   
+}
+.about-content h2{
+    font-size: 1.8rem;
+    font-display: bold;
+    margin-bottom: 0.5rem;
+}
+.about-content p{
+    font-size: 1.4rem;
+   
+}
+.border{
+    border: 1px solid black;
+    margin: 0% 5%;
+}
+.menu{
+    /* border: 2px solid red; */
+    margin-top: 4rem;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.menu h2{
+    background-color: rgb(0,128, 0);
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    box-shadow: -3px -3px 10px green;
+}
+.menu h1{
+    margin: 2rem;
+    
+}
+.menu h3{
+    color: red;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+.menu-img{
+display: grid;
+gap: 10px;
+grid-template-areas: "I1 I1 I2 I3" "I1 I1 I2 I7" "I5 I6 I4 I7";
+
+}
+.menu-img img{
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.menu-img img:hover{
+    transform: scale(1.02);
+}
+.card1{
+    grid-area: I1;
+
+}
+.card2{
+    grid-area: I2;
+}
+.card3{
+    grid-area: I3;
+}
+.card4{
+    grid-area: I4;
+}
+.card5{
+    grid-area: I5;
+}
+.card6{
+    grid-area: I6;
+}
+.card7{
+    grid-area: I7;
+}
+.cards{
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    /* border: 4px solid red; */
+    overflow: hidden;
+}
+.cards .card-content{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+    transition: .5s ease;
+    color: white;
+    text-align: center;
+   
+}
+.cards .card-content p{
+   font-size: 20px;
+   margin: 0 10px;
+}
+.cards:hover .card-content{
+left: 0;
+}
+.footer{
+    
+    padding: 2% 5%;
+    margin-top: 20px ;
+background-color: rgb(219, 142, 41);
+display: flex;
+justify-content: space-around;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.links h2{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.links a{
+    color: black;
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+ .input{
+    border: 2px solid rgb(43, 41, 41);
+    padding: 0.5rem 0rem;
+}
+.social-media a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    display: inline-flex;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    justify-content: center;
+    align-items: center;
+    
+    background: transparent;
+    transition: 0.2s ease;
+}
+.social-media a:hover{
+    transform: scale(1.2);
+    
+    box-shadow: 0 0 1rem black;
+}
+@media screen and (max-width:760px){
+    .header ul{
+        background-color: rgb(49, 44, 44);
+        position: fixed;
+        top: 80;
+        right: -100%;
+        width: 250px;
+      border-radius: 10px;
+      
+    }
+    .header ul li{
+        display: block;
+        text-align: center;
+    }
+    .header ul li a{
+    color: white;
+    text-align: center;
+    }
+    .fa-solid{
+        display: block;
+    }
+    #check:checked~ul{
+        right: 0;
+    }
+    .about{
+        flex-wrap: wrap;
+        overflow-x: scroll;
+        
+    }
+   
+    .footer{
+        flex-direction: column;
+    }
+    .menu-img{
+        display: flex;
+        flex-basis: 40%;
+        flex-wrap: wrap;
+    }
+    .card1,.card7,.card2{
+        display: none;
+    }
+    .hero-content{
+        width: 100%;
+        overflow: hidden;
+        padding-right: 5%;
+        
+    }
+    .hero-content p{
+        overflow: hidden;
+    }
+ 
+ .about-box{
+    padding-top: 10px;
+ }
+ .hero-content h1{
+    width: 100%;
+    font-size: 4rem;
+ }
+}
+
+ 
